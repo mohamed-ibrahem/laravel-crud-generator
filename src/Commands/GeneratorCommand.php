@@ -308,7 +308,7 @@ abstract class GeneratorCommand extends Command
         return str_replace(
             array_keys($replace),
             array_values($replace),
-            $this->_getSpace(10) . '<th>{{title}}</th>' . "\n"
+            $this->_getSpace(10) . '<th>@lang(\'{{modelNameLowerCase}}.field.'. $title .'\')</th>' . "\n"
         );
     }
 
