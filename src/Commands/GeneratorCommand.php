@@ -301,14 +301,10 @@ abstract class GeneratorCommand extends Command
      */
     protected function getHead($title)
     {
-        $replace = array_merge($this->buildReplacements(), [
-            '{{title}}' => $title,
-        ]);
-
         return str_replace(
-            array_keys($replace),
-            array_values($replace),
-            $this->_getSpace(10) . '<th>@lang(\'{{modelNameLowerCase}}.field.'. $title .'\')</th>' . "\n"
+            array_keys($this->buildReplacements()),
+            array_values($this->buildReplacements()),
+            $this->_getSpace(10) . '<th>@lang(\'{{modelNamePluralLowerCase}}.field.'. $title .'\')</th>' . "\n"
         );
     }
 
