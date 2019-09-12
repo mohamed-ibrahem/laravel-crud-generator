@@ -285,7 +285,7 @@ abstract class GeneratorCommand extends Command
     protected function getField($title, $column, $type = 'form-field')
     {
         $replace = array_merge($this->buildReplacements(), [
-            '{{title}}' => '@lang(\'{{modelNamePluralLowerCase}}.field.'. $title .'\')',
+            '{{title}}' => 'trans(\'{{modelNamePluralLowerCase}}.field.'. $title .'\')',
             '{{column}}' => $column,
         ]);
 
