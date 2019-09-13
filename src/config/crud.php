@@ -48,7 +48,6 @@ return [
          */
         'unwantedColumns' => [
             'id',
-            'password',
             'email_verified_at',
             'remember_token',
             'created_at',
